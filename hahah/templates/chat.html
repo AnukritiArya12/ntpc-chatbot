@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTPC HR Chatbot</title>
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div class="chat-container">
+    <div class="chat-header">👋 Welcome to NTPC HR Assistant</div>
+
+    <div class="quick-buttons">
+        <button onclick="sendQuick('joining formalities')">Joining Formalities</button>
+        <button onclick="sendQuick('joining procedure')">Joining Procedure</button>
+        <button onclick="sendQuick('contact')">Contact</button>
+        <button onclick="sendQuick('support')">Support</button>
+        <button onclick="sendQuick('query')">Query</button>
+    </div>
+
+    <div id="chatlog" class="chat-log"></div>
+
+    <div class="chat-input-area">
+        <input type="text" id="user_input" placeholder="Type your message..." onkeypress="if(event.key==='Enter') send()">
+        <button onclick="send()">Send</button>
+        <button onclick="clearChat()">Clear</button>
+        <button onclick="startVoice()">🎤 Speak</button> <!-- ✅ Voice button added -->
+    </div>
+</div>
+
+</body>
+</html>
