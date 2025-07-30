@@ -1,6 +1,0 @@
-Flask
-sentence-transformers
-torch
-scipy
-numpy
-gunicorn
